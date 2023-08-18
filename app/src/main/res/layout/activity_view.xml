@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="24dp"
+    android:layout_height="match_parent"
+    android:background="@color/lightBrown"
+    tools:context=".appFragments.ViewActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/view_page_product_name_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        app:cardElevation="@dimen/text_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/view_page_product_name"
+            style="LargePlaceHolderText"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="@string/product_name_placeholder"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <TextView
+        android:id="@+id/view_page_c_p_place_holder"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_margin"
+        android:text="@string/c_p"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_page_product_name_card_view" />
+
+    <TextView
+        android:id="@+id/view_page_c_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_page_c_p_place_holder"
+        app:layout_constraintBottom_toBottomOf="@id/view_page_c_p_place_holder"
+        tools:text="$180" />
+
+    <TextView
+        android:id="@+id/view_page_s_p_place_holder"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_margin"
+        android:text="@string/s_p"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_page_c_p_place_holder" />
+
+    <TextView
+        android:id="@+id/view_page_s_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_page_s_p_place_holder"
+        app:layout_constraintBottom_toBottomOf="@id/view_page_s_p_place_holder"
+        tools:text="$200" />
+
+
+    <TextView
+        android:id="@+id/view_page_qty_place_holder"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_margin"
+        android:text="@string/quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_page_s_p_place_holder" />
+
+    <TextView
+        android:id="@+id/view_page_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_page_qty_place_holder"
+        app:layout_constraintBottom_toBottomOf="@id/view_page_qty_place_holder"
+        tools:text="2000" />
+
+    <TextView
+        android:id="@+id/view_page_description_place_holder"
+        android:text="@string/description"
+        android:gravity="center"
+        android:textStyle="bold|normal"
+        android:textSize="22sp"
+        android:elevation="15dp"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#F2F6FA"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_page_qty_place_holder" />
+
+    <TextView
+        android:id="@+id/view_page_description"
+        android:layout_marginTop="@dimen/between_element"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_page_description_place_holder"
+        tools:text="@string/jargon"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/view_page_add_to_sell_btn"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/parent_padding"
+        app:cornerRadius="@dimen/text_margin"
+        android:layout_height="50dp"
+        android:text="@string/add_to_sell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_page_description" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/view_page_edit_btn"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/text_margin"
+        app:cornerRadius="@dimen/text_margin"
+        android:layout_height="50dp"
+        android:text="@string/edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_page_add_to_sell_btn" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

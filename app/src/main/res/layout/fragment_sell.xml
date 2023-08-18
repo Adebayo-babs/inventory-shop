@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".appFragments.SellFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainSell"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/sell_bottom_nav_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchViewProd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Search product ..." />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardViewSellRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialCardView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/newSellRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/sell_page_sell_list_subtitle"
+            app:layout_constraintTop_toBottomOf="@id/materialCardView"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/sell_page_Product"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_margin"
+        android:text="@string/product_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialCardView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sell_page_text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_margin"
+        android:hint="Quantity"
+        app:layout_constraintBottom_toBottomOf="@id/sell_page_Product"
+        app:layout_constraintStart_toEndOf="@+id/sell_page_Product"
+        app:layout_constraintTop_toTopOf="@id/sell_page_Product">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/qtyField"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/sell_page_divider"
+        style="@style/Divider"
+        android:layout_width="2dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/text_margin"
+        app:layout_constraintBottom_toBottomOf="@id/sell_page_text_layout"
+        app:layout_constraintStart_toEndOf="@id/sell_page_text_layout"
+        app:layout_constraintTop_toTopOf="@id/sell_page_text_layout" />
+
+    <TextView
+        android:id="@+id/sell_page_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/sell_page_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/sell_page_divider"
+        app:layout_constraintTop_toTopOf="@id/sell_page_divider"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="20" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sell_page_add_to_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:minWidth="@dimen/add_to_sell_btn"
+        android:text="Add to Cart"
+        android:textSize="16sp"
+        app:cornerRadius="@dimen/parent_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sell_page_Product" />
+
+    <TextView
+        android:id="@+id/sell_page_sell_list_subtitle"
+        style="@style/LargePlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:text="Sell List"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sell_page_add_to_sell" />
+
+    <FrameLayout
+        android:id="@+id/sell_page_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/ic_sell_page_background"
+        android:clipToPadding="true"
+        android:isScrollContainer="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sell_page_sell_list_subtitle">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sell_page_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/fragment_sell_page" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/sell_page_total_price"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/between_element"
+        android:layout_marginEnd="53dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sell_page_list_layout"
+        tools:text="Total price : 2000" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sell_page_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="13dp"
+        android:minWidth="@dimen/add_to_sell_btn"
+        android:text="@string/sell"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/parent_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sell_page_total_price" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Qty:"
+        app:layout_constraintBottom_toBottomOf="@id/sell_page_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toEndOf="@id/sell_page_divider"
+        app:layout_constraintTop_toTopOf="@id/sell_page_divider"
+        app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/sell_bottom_nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFC400"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainSell"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/home_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dashboard" />
+            <TextView
+                android:id="@+id/home_icon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Dashboard"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/sell_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:focusable="true" >
+            <ImageView
+                android:id="@+id/sell_icon"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sell_24" />
+            <TextView
+                android:id="@+id/sell_icon_text"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sell"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/catalog_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/catalog_icon"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/catalog" />
+            <TextView
+                android:id="@+id/catalog_icon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/catalog"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/analytic_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/analytic_icon"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/analytics" />
+            <TextView
+                android:id="@+id/analytic_icon_text"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/analytics"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/profile_icon"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profile" />
+            <TextView
+                android:id="@+id/profile_icon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/profile"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

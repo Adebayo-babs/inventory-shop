@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "104943935984",
+    "project_id": "inventory-be90d",
+    "storage_bucket": "inventory-be90d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104943935984:android:ed02e68abb30793cb83d35",
+        "android_client_info": {
+          "package_name": "com.example.inventory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104943935984-9v7km4vs0asnekv5kegdhkh501mhbdmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaW3sz1HhlXH9-Xf4DQw4u3Nw74U8gT6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104943935984-9v7km4vs0asnekv5kegdhkh501mhbdmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

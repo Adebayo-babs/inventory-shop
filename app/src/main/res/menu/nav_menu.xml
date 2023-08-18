@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/dashboard"
+        android:title="@string/dashboard" />
+    <item
+        android:id="@+id/sellFragment"
+        android:icon="@drawable/sell_24"
+        android:title="@string/sell" />
+    <item
+        android:id="@+id/catalogFragment"
+        android:icon="@drawable/catalog"
+        android:title="@string/catalog" />
+    <item
+        android:id="@+id/analyticsFragment"
+        android:icon="@drawable/analytics"
+        android:title="@string/analytics" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/profile"
+        android:title="@string/profile" />
+</menu>

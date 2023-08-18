@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/parent_padding"
+    android:background="#FAF5C3"
+    tools:context=".appFragments.AddActivity">
+
+    <TextView
+        android:id="@+id/product_name"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_name_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_product_page_product_name_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_product_name"
+        android:layout_marginStart="@dimen/text_margin"
+        app:layout_constraintBottom_toBottomOf="@id/product_name"
+        app:layout_constraintStart_toEndOf="@id/product_name"
+        app:layout_constraintTop_toTopOf="@id/product_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProductName"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:textColorHint="#424242" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/add_product_category"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_space"
+        android:text="@string/category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_product_page_category_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_category"
+        android:layout_marginStart="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/add_product_category"
+        app:layout_constraintStart_toEndOf="@id/add_product_category"
+        app:layout_constraintTop_toTopOf="@id/add_product_category">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCategory"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:textColorHint="#37474F" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/add_page_product_description"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_space"
+        android:text="@string/product_description"
+        app:layout_constraintTop_toBottomOf="@id/add_product_category"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_page_product_description_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/between_element"
+        app:layout_constraintTop_toBottomOf="@id/add_page_product_description"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/productDescription"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/add_a_description"
+            android:textColorHint="#37474F" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/add_page_cost_price"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c_p"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_page_product_description_input" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_page_cost_price_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/between_element"
+        android:hint="@string/c_pr"
+        app:layout_constraintTop_toBottomOf="@id/add_page_cost_price"
+        app:layout_constraintStart_toStartOf="@id/add_page_cost_price"
+        app:layout_constraintEnd_toEndOf="@id/add_page_cost_price" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/costPrice"
+            android:inputType="number"
+            android:layout_width="85dp"
+            android:layout_height="48dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/add_page_sell_price"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/s_p"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="@dimen/text_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_page_product_description_input" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_page_sell_price_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/between_element"
+        android:hint="@string/s_pr"
+        app:layout_constraintTop_toBottomOf="@id/add_page_sell_price"
+        app:layout_constraintStart_toStartOf="@id/add_page_sell_price"
+        app:layout_constraintEnd_toEndOf="@id/add_page_sell_price" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sellingPrice"
+            android:layout_width="85dp"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:textColorHint="#37474F" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="@dimen/text_margin"
+        android:background="@drawable/line_7"
+        app:layout_constraintEnd_toStartOf="@+id/add_page_sell_price_input"
+        app:layout_constraintStart_toEndOf="@id/add_page_cost_price_input"
+        app:layout_constraintTop_toBottomOf="@id/add_page_cost_price" />
+
+    <TextView
+        android:id="@+id/add_page_product_qty"
+        style="@style/MediumPlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_quantity"
+        android:layout_marginTop="@dimen/parent_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_page_cost_price_input"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_page_product_qty_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/qty"
+        android:layout_marginStart="@dimen/text_margin"
+        app:layout_constraintTop_toTopOf="@id/add_page_product_qty"
+        app:layout_constraintStart_toEndOf="@id/add_page_product_qty"
+        app:layout_constraintBottom_toBottomOf="@id/add_page_product_qty">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/quantity"
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:textColorHint="#37474F" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/add_page_full_line"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="@dimen/parent_padding"
+        android:background="@drawable/ic_full_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_page_product_qty" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_page_profit_margin_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_profit_percentage"
+        android:layout_marginTop="@dimen/parent_padding"
+        app:layout_constraintTop_toBottomOf="@id/add_page_full_line"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_page_profit_margin_text"
+            android:layout_width="75dp"
+            android:layout_height="48dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/add_page_percentage_sign"
+        style="@style/LargePlaceHolderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/between_element"
+        android:text="@string/percentage_symbol"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="@id/add_page_profit_margin_input"
+        app:layout_constraintBottom_toBottomOf="@id/add_page_profit_margin_input"
+        app:layout_constraintStart_toEndOf="@id/add_page_profit_margin_input" />
+
+    <TextView
+        android:id="@+id/add_page_percentage_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/percentage_text"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/between_element"
+        app:layout_constraintTop_toTopOf="@id/add_page_percentage_sign"
+        app:layout_constraintBottom_toBottomOf="@id/add_page_percentage_sign"
+        app:layout_constraintStart_toEndOf="@id/add_page_percentage_sign" />
+
+    <TextView
+        android:id="@+id/add_page_small_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/note_msg"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/parent_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_page_profit_margin_input" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold|normal"
+        app:cornerRadius="@dimen/parent_padding"
+        android:text="@string/add_product"
+        android:layout_marginTop="@dimen/parent_padding"
+        app:layout_constraintTop_toBottomOf="@id/add_page_small_notes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

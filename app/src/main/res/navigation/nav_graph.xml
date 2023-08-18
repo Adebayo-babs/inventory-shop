@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.inventory.authFragments.SplashFragment"
+        android:label="SPLASH"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.inventory.authFragments.SignUpFragment"
+        android:label="SIGN UP"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.inventory.authFragments.SignInFragment"
+        android:label="SIGN IN"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.inventory.authFragments.WelcomeFragment"
+        android:label="WELCOME"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_dashboardFragment2"
+            app:destination="@id/dashboardFragment2" />
+    </fragment>
+<!--    <activity-->
+<!--        android:id="@+id/homeActivity"-->
+<!--        android:name="com.example.inventory.HomeActivity"-->
+<!--        android:label="activity_home"-->
+<!--        tools:layout="@layout/activity_home">-->
+
+<!--    </activity>-->
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.inventory.appFragments.ProfileFragment"
+        android:label="PROFILE"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment2_to_dashboardFragment2"
+            app:destination="@id/dashboardFragment2" />
+        <action
+            android:id="@+id/action_profileFragment2_to_sellFragment2"
+            app:destination="@id/sellFragment2" />
+        <action
+            android:id="@+id/action_profileFragment2_to_catalogFragment2"
+            app:destination="@id/catalogFragment2" />
+        <action
+            android:id="@+id/action_profileFragment2_to_analyticsFragment2"
+            app:destination="@id/analyticsFragment2" />
+        <action
+            android:id="@+id/action_profileFragment2_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_profileFragment2_to_signInFragment"
+            app:destination="@id/signInFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment2"
+        android:name="com.example.inventory.appFragments.DashboardFragment"
+        android:label="DASHBOARD"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment2_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/action_dashboardFragment2_to_sellFragment2"
+            app:destination="@id/sellFragment2" />
+        <action
+            android:id="@+id/action_dashboardFragment2_to_catalogFragment2"
+            app:destination="@id/catalogFragment2" />
+        <action
+            android:id="@+id/action_dashboardFragment2_to_analyticsFragment2"
+            app:destination="@id/analyticsFragment2" />
+        <action
+            android:id="@+id/action_dashboardFragment2_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment2_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellFragment2"
+        android:name="com.example.inventory.appFragments.SellFragment"
+        android:label="SELL"
+        tools:layout="@layout/fragment_sell" >
+        <action
+            android:id="@+id/action_sellFragment2_to_dashboardFragment2"
+            app:destination="@id/dashboardFragment2" />
+        <action
+            android:id="@+id/action_sellFragment2_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/action_sellFragment2_to_catalogFragment2"
+            app:destination="@id/catalogFragment2" />
+        <action
+            android:id="@+id/action_sellFragment2_to_analyticsFragment"
+            app:destination="@id/analyticsFragment2" />
+        <action
+            android:id="@+id/action_sellFragment2_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_sellFragment2_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catalogFragment2"
+        android:name="com.example.inventory.appFragments.CatalogFragment"
+        android:label="CATALOG"
+        tools:layout="@layout/fragment_catalog" >
+        <action
+            android:id="@+id/action_catalogFragment2_to_dashboardFragment2"
+            app:destination="@id/dashboardFragment2" />
+        <action
+            android:id="@+id/action_catalogFragment2_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_catalogFragment2_to_sellFragment"
+            app:destination="@id/sellFragment2" />
+        <action
+            android:id="@+id/action_catalogFragment2_to_analyticsFragment2"
+            app:destination="@id/analyticsFragment2" />
+        <action
+            android:id="@+id/action_catalogFragment2_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/action_catalogFragment2_to_welcomeFragment2"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_catalogFragment2_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/analyticsFragment2"
+        android:name="com.example.inventory.appFragments.AnalyticsFragment"
+        android:label="ANALYTICS"
+        tools:layout="@layout/fragment_analytics" >
+        <action
+            android:id="@+id/action_analyticsFragment2_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_analyticsFragment2_to_dashboardFragment2"
+            app:destination="@id/dashboardFragment2" />
+        <action
+            android:id="@+id/action_analyticsFragment2_to_sellFragment2"
+            app:destination="@id/sellFragment2" />
+        <action
+            android:id="@+id/action_analyticsFragment2_to_catalogFragment2"
+            app:destination="@id/catalogFragment2" />
+        <action
+            android:id="@+id/action_analyticsFragment2_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/action_analyticsFragment2_to_welcomeFragment2"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFragment"
+        android:name="com.example.inventory.appFragments.ViewFragment"
+        android:label="ViewFragment" >
+        <action
+            android:id="@+id/action_viewFragment_to_sellFragment2"
+            app:destination="@id/sellFragment2" />
+        <action
+            android:id="@+id/action_viewFragment_to_catalogFragment2"
+            app:destination="@id/catalogFragment2" />
+    </fragment>
+    <dialog
+        android:id="@+id/addFragment"
+        android:name="com.example.inventory.appFragments.AddFragment"
+        android:label="AddFragment" >
+        <action
+            android:id="@+id/action_addFragment_to_dashboardFragment2"
+            app:destination="@id/dashboardFragment2" />
+    </dialog>
+
+</navigation>

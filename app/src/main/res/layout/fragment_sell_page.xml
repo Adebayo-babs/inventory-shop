@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sellEditCatalog"
+    android:padding="@dimen/between_element"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/sell_page_sell_list_name"
+        style="@style/LessOpaqueText"
+        android:minWidth="150dp"
+        android:maxWidth="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Laptop"/>
+
+    <TextView
+        android:id="@+id/sell_page_sell_list_qty"
+        style="@style/LessOpaqueText"
+        android:layout_marginStart="@dimen/text_margin"
+        android:minWidth="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/sell_page_sell_list_name"
+        app:layout_constraintTop_toTopOf="@id/sell_page_sell_list_name"
+        app:layout_constraintBottom_toBottomOf="@id/sell_page_sell_list_name"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/sell_page_sell_list_price"
+        style="@style/LessOpaqueText"
+        android:minWidth="100dp"
+        android:maxWidth="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_margin"
+        app:layout_constraintStart_toEndOf="@id/sell_page_sell_list_qty"
+        app:layout_constraintTop_toTopOf="@id/sell_page_sell_list_qty"
+        app:layout_constraintBottom_toBottomOf="@id/sell_page_sell_list_qty"
+        tools:text="200" />
+
+    <ImageView
+        android:id="@+id/deleteSellBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sell_page_sell_list_price"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

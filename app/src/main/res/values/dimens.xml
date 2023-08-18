@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="between_element">8dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="parent_padding">24dp</dimen>
+    <dimen name="add_to_sell_btn">150dp</dimen>
+    <!--    Add product page dimen-->
+    <dimen name="large_space">36dp</dimen>
+</resources>
+
+
